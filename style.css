@@ -29,14 +29,20 @@ header {
     padding: 1.5rem 5rem; 
 }
 
-.nav-logo h1 {
-    font-size: 2vw;
+.nav-logo {
+    flex: 1;
+    justify-content: left;
+}
+.nav-logo a {
+    font-size: 3vw;
+    color: var(--branco);
 }
 
 .nav-pesquisar {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 .nav-pesquisar .input-pesquisar {
     width: 300px;
@@ -60,17 +66,23 @@ header {
 }
 
 .nav-contatos {
-    height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
+    flex: 1;
 }
 .nav-contatos .nav-list {
     display: flex;
-    height: 100%;
     align-items: center;
     justify-content: center;
     gap: 2vw;
+}
+.nav-contatos a {
+    color: var(--branco);
+}
+.nav-contatos a:hover {
+    color: grey;
 }
 
 .container-nav-categorias {
@@ -88,6 +100,12 @@ header {
     gap: 5vw;
     padding: 5px;
 }
+.container-nav-categorias .list-nav-categorias .link-nav-categoria {
+    color: var(--preto);
+}
+.container-nav-categorias .list-nav-categorias .link-nav-categoria:hover {
+    text-decoration: underline;
+}
 
 .nav-bar .menu-mobile {
     display: none;
@@ -99,4 +117,46 @@ header {
 
 .pesquisa-mobile {
     display: none;
+}
+
+
+/*HEADER RESPONSIVO*/
+
+@media (max-width: 768px) {
+
+    .nav-pesquisar {
+        display: none;
+    }
+
+    .nav-contatos {
+        display: none;
+    }
+
+    .nav-bar .menu-mobile {
+        display: block;
+    }
+    .nav-bar .menu-mobile button {
+        padding: 5px;
+        cursor: pointer;
+        background-color: var(--branco);
+    }
+
+    .pesquisa-mobile {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    .pesquisa-mobile .input-pesquisar-mobile {
+        width: 90vw;
+        text-indent: 10px;
+        border: none;
+        outline: none;
+    }
+    .pesquisa-mobile .botao-pesquisar-mobile {
+        width: 10vw;
+        color: var(--branco);
+        background-color: var(--preto);
+        border: none;
+        cursor: pointer;
+    }
 }
