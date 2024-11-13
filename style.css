@@ -27,14 +27,24 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 5rem; 
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .nav-logo {
     flex: 1;
+    display: flex;
     justify-content: left;
+    align-items: center;
+}
+.nav-logo h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-logo a {
-    font-size: 3vw;
+    display: flex;
+    font-size: 30px;
     color: var(--branco);
 }
 
@@ -63,8 +73,11 @@ header {
     align-items: center;
     border-radius: 0 5px 5px 0;
     font-weight: bold;
+    background-color: var(--branco);
 }
-
+.nav-pesquisar .botao-pesquisar:hover {
+    background-color: grey;
+}
 .nav-contatos {
     position: relative;
     display: flex;
@@ -111,7 +124,7 @@ header {
     display: none;
 }
 
-.nav-bar .nav-list-mobile {
+.nav-list-mobile {
     display: none;
 }
 
@@ -132,13 +145,34 @@ header {
         display: none;
     }
 
+    .nav-bar {
+        padding: 1.5rem 3rem;
+    }
+
     .nav-bar .menu-mobile {
         display: block;
     }
     .nav-bar .menu-mobile button {
         padding: 5px;
         cursor: pointer;
-        background-color: var(--branco);
+        background-color: transparent;
+        border: none;
+        display: flex;
+    }
+    nav.list-mobile {
+    border: none;
+    }
+
+    .nav-list-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+        border: none;
+    }
+    .nav-list-mobile .nav-item {
+        display: block;
     }
 
     .pesquisa-mobile {
@@ -155,12 +189,31 @@ header {
     .pesquisa-mobile .botao-pesquisar-mobile {
         width: 10vw;
         color: var(--branco);
-        background-color: var(--preto);
+        background-color: var(--branco);
         border: none;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 1vh;
+        font-size: 0.7rem;
+    }
+    .pesquisa-mobile .botao-pesquisar-mobile:hover {
+        background-color: grey;
+    }
+
+    .open {
+        display: flex;
+        height: auto;
+        width: 50%;
+        position: absolute;
+        right:0%;
+        background-color: #000;
+        border: none;
     }
 }
+
+/*MAIN*/
+
+
+
