@@ -120,11 +120,7 @@ header {
     text-decoration: underline;
 }
 
-.nav-bar .menu-mobile {
-    display: none;
-}
-
-.nav-list-mobile {
+.btn-mobile {
     display: none;
 }
 
@@ -141,16 +137,27 @@ header {
         display: none;
     }
 
-    .nav-contatos {
-        display: none;
+    }
+    .nav-contatos .nav-list {
+        /*display: none;*/
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        background-color: var(--preto);
+        display: block;
+        box-sizing: border-box;
     }
 
     .nav-bar {
         padding: 1.5rem 3rem;
     }
 
-    .nav-bar .menu-mobile {
+    .btn-mobile {
         display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
     .nav-bar .menu-mobile button {
         padding: 5px;
@@ -159,20 +166,8 @@ header {
         border: none;
         display: flex;
     }
-    nav.list-mobile {
-    border: none;
-    }
-
-    .nav-list-mobile ul {
+    #nav-contatos.active .nav-list {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 20px;
-        border: none;
-    }
-    .nav-list-mobile .nav-item {
-        display: block;
     }
 
     .pesquisa-mobile {
@@ -200,16 +195,6 @@ header {
     }
     .pesquisa-mobile .botao-pesquisar-mobile:hover {
         background-color: grey;
-    }
-
-    .open {
-        display: flex;
-        height: auto;
-        width: 50%;
-        position: absolute;
-        right:0%;
-        background-color: #000;
-        border: none;
     }
 }
 

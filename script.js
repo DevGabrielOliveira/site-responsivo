@@ -1,9 +1,9 @@
 
-function menuAbrir() {
-    let menuMobile = document.querySelector(".nav-list-mobile");
-    if (menuMobile.classList.contains("open")) {
-        menuMobile.classList.remove("open");
-    } else {
-        menuMobile.classList.add("open");
-    }
+const btnMobile = document.getElementById('btn-mobile');
+
+function abrirMenu() {
+    const navContatos = document.getElementById('nav-contatos');
+    navContatos.classList.toggle('active');
 }
+
+btnMobile.addEventListener('click', abrirMenu);
